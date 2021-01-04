@@ -22,5 +22,7 @@ public class CustomerController {
         InstanceInfo info = eurekaClient.getNextServerFromEureka("SEARCH", false);
         String url = info.getHomePageUrl();
         return restTemplate.getForObject(url + "/search", String.class);
+      /*  String result = restTemplate.getForObject("http://SEARCH/search", String.class);
+        return result;*/
     }
 }
